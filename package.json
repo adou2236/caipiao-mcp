@@ -8,9 +8,11 @@
   },
   "scripts": {
     "build": "tsc && chmod 755 build/index.js",
-    "test": "npm run build & npx -y @modelcontextprotocol/inspector node build/index.js"
+    "test": "npx tsx src/index.ts & npx fastmcp inspect src/index.ts"
   },
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,6 +21,8 @@
     "@anthropic-ai/sdk": "^0.57.0",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "dotenv": "^17.2.1",
+    "fastmcp": "^3.13.0",
+    "mcp-handler": "^1.0.1",
     "zod": "^3.25.76"
   },
   "devDependencies": {
